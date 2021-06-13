@@ -282,6 +282,8 @@ if (isset($_POST["action"]) && $_POST["action"] == "save") {
                     });
                 });
                 $("#saveBtn").click(function() {
+                    $(this).attr("disabled", true);
+                    $(this).text("Bitte warten ...");
                     var fields = [];
                     $(this).parent().find(".choose").each(function() {
                         fields.push({
@@ -306,7 +308,8 @@ if (isset($_POST["action"]) && $_POST["action"] == "save") {
                         } else {
                             alert("Gespeichert!");
                         }
-
+                        $("#saveBtn").attr("disabled", false);
+                        $("#saveBtn").text("Speichern");
                     });
                 });
 
