@@ -121,7 +121,7 @@ if (isset($_POST["action"]) && $_POST["action"] == "save") {
                 <input class="form-control" autocomplete="off" type="text" id="nameInput" placeholder="<?php echo (isset($_SESSION["user"]) ? $_SESSION["user"] : "Vor- und Nachname"); ?>" value="<?php echo (isset($_SESSION["user"]) ? $_SESSION["user"] : "");  ?>">
             <?php } ?>
             <div class="my-4">
-                Klicke alle Stunden an, in denen Du Zeit hättest, indenen du zwei Schhulstunden mit einem AGM Treffen verbringen möchtest.
+                Klicke alle Stunden an, in denen Du Zeit hättest, indenen du zwei Schhulstunden mit einem AGM Treffen verbringen kannst.
             </div>
             <div id="stundenplaene">
                 <?php $wochen = array(
