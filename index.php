@@ -117,20 +117,19 @@ if (isset($_POST["action"]) && $_POST["action"] == "save") {
                                 echo "Administratoransicht";
                             } ?></h1>
             <?php if (!isset($_GET[ADMINKEY])) { ?>
-                <p class="lead">Bitte gib an, wer du bist und wann zu Zeit hast, um beim Dreh dabei zu sein.</p>
+                <p class="lead">Bitte gib an, wer du bist und wann zu Zeit hast, um beim AGM Treffen dabei zu sein</p>
                 <input class="form-control" autocomplete="off" type="text" id="nameInput" placeholder="<?php echo (isset($_SESSION["user"]) ? $_SESSION["user"] : "Vor- und Nachname"); ?>" value="<?php echo (isset($_SESSION["user"]) ? $_SESSION["user"] : "");  ?>">
             <?php } ?>
             <div class="my-4">
-                Klicke alle Stunden an, in denen Du Zeit hättest, etwas für die AGM zu drehen.
+                Klicke alle Stunden an, in denen Du Zeit hättest, indenen du zwei Schhulstunden mit einem AGM Treffen verbringen möchtest.
             </div>
             <div id="stundenplaene">
                 <?php $wochen = array(
-                    "2. Woche nach den Ferien (14.06.2021 - 18.06.2021)",
-                    "3. Woche nach den Ferien (21.06.2021 - 25.06.2021)",
-                    "4. Woche nach den Ferien (28.06.2021 - 02.07.2021)",
-                    "5. Woche nach den Ferien (05.07.2021 - 09.07.2021)",
-                    "6. Woche nach den Ferien (12.07.2021 - 16.07.2021)",
-                    "Vorletzte Schulwoche (19.07.2021 - 23.07.2021)",
+                    "Vorletzte Woche vor den Herbstferien (17.10.22 - 21.10.2022)",
+                    "Letzte Woche vor den Herbstferien (24.10.22 - 28.10.2022)",
+                    "1. Woche nach den Herbstferien (7.11.22 - 11.11.2022)",
+                    "2. Woche nach den Herbstferien (14.11.22 - 18.11.2022)",
+                    "3. Woche nach den Herbstferien (21.11.22 - 25.11.2022)",
                 );
                 $wochencounter = 0;
                 foreach ($wochen as $nummer => $woche) {
@@ -156,11 +155,11 @@ if (isset($_POST["action"]) && $_POST["action"] == "save") {
                                 <?php
                                 $zeiten = array(
                                     "07:45 - 08:30", "08:30 - 09:15", "09:15 - 10:00",
-                                    "PAUSE",
+                                    "PAUSE 25 min",
                                     "10:25 - 11:10", "11:10 - 11:55", "11:55 - 12:40",
-                                    "PAUSE",
+                                    "PAUSE 45 min",
                                     "13:25 - 14:10", "14:10 - 14:55",
-                                    "PAUSE",
+                                    "PAUSE 10 min",
                                     "15:05 - 15:50", "15:50 - 16:35",
                                 );
                                 $stundecounter = 0;
